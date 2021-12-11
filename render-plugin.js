@@ -1,5 +1,3 @@
-'use strict';
-
 const vm = require('vm');
 const ReactDOMServer = require('react-dom/server');
 const webpack = require('webpack');
@@ -23,17 +21,18 @@ class RenderPlugin {
 								ReactDOMServer.renderToStaticMarkup(
 									c.exports.default()
 								);
-							const helmet = c.exports.Helmet.renderStatic();
-							console.log(helmet.link.toString());
+							const helmet = c.exports.Helmet
+								? c.exports.Helmet.renderStatic()
+								: null;
 							const html = `
 						<!doctype html>
-						<html ${helmet.htmlAttributes.toString()}>
+						<html ${helmet ? helmet.htmlAttributes.toString() : ''}>
 							<head>
-								${helmet.title.toString()}
-								${helmet.meta.toString()}
-								${helmet.link.toString()}
+								${helmet ? helmet.title.toString() : ''}
+								${helmet ? helmet.meta.toString() : ''}
+								${helmet ? helmet.link.toString() : ''}
 							</head>
-							<body ${helmet.bodyAttributes.toString()}>
+							<body ${helmet ? helmet.bodyAttributes.toString() : ''}>
 								${bodyContent}
 							</body>
 						</html>
