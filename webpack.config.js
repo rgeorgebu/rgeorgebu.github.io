@@ -65,7 +65,7 @@ module.exports = (_, argv) => {
 				{
 					test: /\.css$/,
 					use: [
-						isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+						MiniCssExtractPlugin.loader,
 						{
 							loader: 'css-loader',
 							options: {
@@ -78,7 +78,7 @@ module.exports = (_, argv) => {
 			],
 		},
 		plugins: [
-			isProd && new MiniCssExtractPlugin(),
+			new MiniCssExtractPlugin({}),
 			isProd && new RenderPlugin(),
 			...Object.keys(entryPoints).map(
 				(e) =>
@@ -92,6 +92,18 @@ module.exports = (_, argv) => {
 		devServer: {
 			magicHtml: false,
 			open: true,
+		},
+		optimization: {
+			splitChunks: {
+				cacheGroups: {
+					styles: {
+						name: 'styles',
+						type: 'css/mini-extract',
+						chunks: 'all',
+						enforce: true,
+					},
+				},
+			},
 		},
 	};
 };
