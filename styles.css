@@ -1,0 +1,47 @@
+.qMuEBhtoXm5TpTGoURwp {
+	display: flex;
+	flex-direction: column;
+}
+
+.z_3OhKlQ6iqhtEFRuUgM > * + * {
+	margin-left: 0.25rem;
+}
+
+.FwjmkGqF_1etDSir9qz_ {
+	padding: 0.5rem;
+	background-color: lightblue;
+}
+
+.FwjmkGqF_1etDSir9qz_ > p {
+	margin: 0;
+}
+
+nav {
+	background-color: lightyellow;
+	padding: 0.5rem;
+}
+
+nav > * + * {
+	margin-left: 0.5rem;
+}
+
+html {
+	font-family: sans-serif;
+	background-color: #f8f8f8;
+	color: #333333;
+	box-sizing: border-box;
+}
+
+body > div {
+	max-width: 80ch;
+}
+
+body > div > * + * {
+	margin-top: 0.5rem;
+}
+
+main {
+	border: 1px solid darkslategray;
+	padding: 0.5rem;
+}
+
