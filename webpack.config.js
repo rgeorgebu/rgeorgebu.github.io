@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const RenderPlugin = require('./render-plugin.js');
 const path = require('path');
 const walk = require('./walk.js');
@@ -88,6 +89,10 @@ module.exports = (_, argv) => {
 						filename: `${e}.html`,
 					})
 			),
+			isProd &&
+				new CopyWebpackPlugin({
+					patterns: ['./CNAME'],
+				}),
 		].filter(Boolean),
 		devServer: {
 			magicHtml: false,
