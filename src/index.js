@@ -1,15 +1,19 @@
+import { Helmet } from 'react-helmet';
 import Base from './_base';
 
 export default function Index() {
 	return (
 		<Base>
-			<h1>Hello world!</h1>
-			<p>This is my home page.</p>
-			<p>This is another paragraph.</p>
+			<Helmet>
+				<title>Home | rgeorgebu</title>
+			</Helmet>
+			<h1>Yo!</h1>
+			<p>{"How's it going there?"}</p>
+			<p>Welcome to my website (you can call me George).</p>
 			<p>
-				<a href="/projects">Projects</a>
-				<a href="/music-reviews">Music Reviews</a>
-				<a href="/about.html">About</a>
+				As you can tell, this site is currently a{' '}
+				<abbr title="Work in Progress">WIP</abbr> so feel free to check
+				back ocassionally for new content!
 			</p>
 		</Base>
 	);
