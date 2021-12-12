@@ -33,7 +33,9 @@ class RenderPlugin {
 								${helmet ? helmet.link.toString() : ''}
 							</head>
 							<body ${helmet ? helmet.bodyAttributes.toString() : ''}>
-								${bodyContent}
+								<div>
+									${bodyContent}
+								</div>
 							</body>
 						</html>
 					`.replace(/(\r|\n|\t)/g, '');
