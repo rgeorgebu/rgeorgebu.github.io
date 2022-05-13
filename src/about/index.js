@@ -9,20 +9,22 @@ export default function About() {
 			</Helmet>
 			<h1>About</h1>
 			<p>
-				Unfortunately {"I'm"} a bit of a boring person, so you might be
+				Unfortunately, {"I'm"} a bit of a boring person, so you might be
 				more interested in learning{' '}
 				<a href="/about/meta.html">About this Website</a>
 			</p>
 			<h2>About Me</h2>
 			<p>
 				My name is George. I am a Software Engineer at{' '}
-				{'$UNDISCLOSED_COMPANY'}. I <em>really really</em> like music.
+				{'$UNDISCLOSED_COMPANY'}. I <em>really really</em> like music. I{' '}
+				{"don't"} really have anything to back up that claim at the
+				moment so hopefully {"you'll"} just take my word.
 			</p>
 			<p>
-				Ironically, I am bit of an anti-technologist; meaning I distrust
+				Ironically, I am bit of an anti-technologist; I distrust
 				technology being sold as a solution to human problems (e.g.
 				crypto). I believe technology is a powerful, yet dangerous, and
-				infantile tool.
+				a still infantile tool.
 			</p>
 			<p>
 				I do not wish for this site to pander nor peddle poor content -

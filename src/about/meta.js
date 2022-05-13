@@ -15,23 +15,23 @@ export default function Meta() {
 				<em>library</em>.
 			</p>
 			<aside>
-				Quick aside: I really do dislike when people (meaning internet
-				people) describe React as a <strong>framework</strong>. React is
-				a <strong>library</strong> meaning it has a singular concern
-				(how to represent UI based on application state) but makes no{' '}
-				<em>strong</em> recommendation to other aspects of ECMAScript
-				web applications (e.g. fetching data, managing state, routing).
+				Quick aside: I really dislike when people (meaning the vague
+				concept of internet people) describe React as a{' '}
+				<strong>framework</strong>. React is a <strong>library</strong>{' '}
+				meaning it has a singular concern (how to represent UI based on
+				application state) but makes no <em>strong</em> recommendation
+				to other aspects of ECMAScript web applications (e.g. fetching
+				data, managing state, routing).
 			</aside>
 			<p>
-				However, I do wish for my products to be performant both for
-				users (UX) and developers (DX). In order to statisfy these
+				However, I do wish for my software output to be performant both
+				for users (UX) and developers (DX). In order to statisfy these
 				constraints for my personal website (the site {"you're"}{' '}
-				currently visiting) the primary concern was static HTML and CSS
-				as the end result. Next level of concern was using React to
+				currently visiting), the primary goal was static HTML and CSS as
+				the end result. The next level of concern was using React to
 				generate the site (as I really appreciate the React model of
-				representing components {"it's"} Lisp-like composition
-				structure) so I can continue to use my favorite front-end
-				library.
+				representing components) so I can continue using my favorite
+				front-end library.
 			</p>
 			<p>
 				Thus the site you see before you was composed of server-side
