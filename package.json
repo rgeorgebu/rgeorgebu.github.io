@@ -39,7 +39,7 @@
 		"build": "webpack --mode production",
 		"serve": "serve dist",
 		"start": "webpack serve --mode development",
-		"format": "prettier --write .",
+		"format": "prettier --write --ignore-unknown .",
 		"lint": "eslint --fix .",
 		"prepare": "husky install",
 		"deploy": "yarn build && gh-pages -d dist"
