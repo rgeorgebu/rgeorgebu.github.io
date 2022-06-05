@@ -1,8 +1,0 @@
-nav {
-	background-color: lightyellow;
-	padding: 0.5rem;
-}
-
-nav > * + * {
-	margin-left: 0.5rem;
-}
