@@ -1,6 +1,6 @@
 # rgeorgebu.github.io
 
-A repository for my personal website. Visit at: [rgeorgebu.github.io](https://rgeorgebu.github.io)
+A repository for my personal website. Visit at: https://rgeorgebu.github.io
 
 ## Requirements
 
