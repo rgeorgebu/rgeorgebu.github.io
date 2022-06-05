@@ -16,7 +16,7 @@ export function ThisSite() {
 			<p>So, in building this site I had two primary design contraints:</p>
 			<ol>
 				<li>
-					The site must be truly and fully static (i.e. HTML &amp; CSS only)
+					The site must be truly and fully static (i.e. HTML and CSS only)
 				</li>
 				<li>The site must be built with React</li>
 			</ol>

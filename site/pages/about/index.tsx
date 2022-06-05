@@ -6,12 +6,23 @@ export function Index() {
 		<Layout>
 			<Helmet>
 				<title>About | rgeorgebu</title>
+				<style>{`
+					.side-by-side {
+						display: flex;
+						gap: 1rem;
+					}
+
+					.side-by-side img {
+						min-width: 33%;
+						object-fit: cover;
+					}
+				`}</style>
 			</Helmet>
 			<h1>About</h1>
 			<h2>Me</h2>
-			<div style={{ display: 'flex', gap: '1rem' }}>
+			<div className="side-by-side">
 				<div>
-					<p style={{ marginTop: 0 }}>
+					<p>
 						My name is George. I am a Software Engineer working at
 						$UNDISCLOSED_COMPANY. I graduated from Milwaukee School of
 						Engineering with a degree in Software Engineering.
@@ -32,7 +43,6 @@ export function Index() {
 					</p>
 				</div>
 				<img
-					style={{ minWidth: '33%', objectFit: 'cover' }}
 					src='/assets/me.jpg'
 					alt='A picture of me'
 				/>
