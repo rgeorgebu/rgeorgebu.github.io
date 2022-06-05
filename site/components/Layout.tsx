@@ -11,13 +11,14 @@ export interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
 	return (
 		<>
-			<Helmet htmlAttributes={{ lang: 'en'}}>
+			<Helmet htmlAttributes={{ lang: 'en' }}>
 				<meta charSet='utf-8' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<title>rgeorgebu.net</title>
 				<link href='https://unpkg.com/normalize.css@8.0.1/normalize.css' />
 				<link rel='favicon' href='/assets/personal-logo.svg' />
-				<style>{`
+				<style>
+					{`
 					body {
 						font-family: sans-serif;
 						color: #333;
@@ -52,7 +53,8 @@ export function Layout({ children }: LayoutProps) {
 					p + p {
 						margin-block-start: 1em;
 					}
-				`}</style>
+				`}
+				</style>
 			</Helmet>
 			<Logo />
 			<Header />

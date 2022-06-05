@@ -4,14 +4,16 @@ export function Nav() {
 	return (
 		<>
 			<Helmet>
-				<style>{`
+				<style>
+					{`
 					nav {
 						padding: 1rem;
 						display: flex;
 						gap: 1rem;
 						background-color: #ddd;
 					}
-				`}</style>
+				`}
+				</style>
 			</Helmet>
 			<nav>
 				<a href='/index.html'>Index</a>

@@ -5,20 +5,22 @@ import { Helmet } from 'react-helmet';
 export function Footer() {
 	return (
 		<>
-		<Helmet>
-			<style>{`
+			<Helmet>
+				<style>
+					{`
 				footer {
 					padding: 1rem;
 					display: flex;
 					flex-direction: column;
 					background-color: #ddd;
 				}
-			`}</style>
-		</Helmet>
-		<footer>
-			<Copyright />
-			<Licensing />
-		</footer>
+			`}
+				</style>
+			</Helmet>
+			<footer>
+				<Copyright />
+				<Licensing />
+			</footer>
 		</>
 	);
 }

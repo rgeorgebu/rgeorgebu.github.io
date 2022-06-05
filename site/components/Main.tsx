@@ -5,17 +5,19 @@ export interface MainProps {
 }
 
 export function Main({ children }: MainProps) {
-    return (
-        <>
-            <Helmet>
-                <style>{`
+	return (
+		<>
+			<Helmet>
+				<style>
+					{`
                     main {
                         background-color: #ddd;
                         padding: 1rem;
                     }
-                `}</style>
-            </Helmet>
-            <main>{children}</main>
-        </>
-    );
+                `}
+				</style>
+			</Helmet>
+			<main>{children}</main>
+		</>
+	);
 }

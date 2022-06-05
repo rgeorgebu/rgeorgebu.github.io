@@ -6,7 +6,8 @@ export function Index() {
 		<Layout>
 			<Helmet>
 				<title>About | rgeorgebu</title>
-				<style>{`
+				<style>
+					{`
 					.side-by-side {
 						display: flex;
 						gap: 1rem;
@@ -16,11 +17,12 @@ export function Index() {
 						min-width: 33%;
 						object-fit: cover;
 					}
-				`}</style>
+				`}
+				</style>
 			</Helmet>
 			<h1>About</h1>
 			<h2>Me</h2>
-			<div className="side-by-side">
+			<div className='side-by-side'>
 				<div>
 					<p>
 						My name is George. I am a Software Engineer working at

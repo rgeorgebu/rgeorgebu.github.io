@@ -8,7 +8,8 @@ export function Logo() {
 	return (
 		<>
 			<Helmet>
-				<style>{`
+				<style>
+					{`
 					.logo {
 						align-self: flex-start;
 						line-height: 0;
@@ -18,9 +19,10 @@ export function Logo() {
 						height: ${HEIGHT_RATIO * MULTIPLIER}rem;
 						width: ${WIDTH_RATIO * MULTIPLIER}rem;
 					}
-				`}</style>
+				`}
+				</style>
 			</Helmet>
-			<a href='/' className="logo">
+			<a href='/' className='logo'>
 				<img
 					src='/assets/personal-logo.svg'
 					alt='Abstract butterfly (my personal logo)'
