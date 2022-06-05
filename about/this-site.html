@@ -1,1 +1,65 @@
-<!DOCTYPE html><html lang="en"><head><meta data-react-helmet="true" charSet="utf-8"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-react-helmet="true">This Site | rgeorgebu</title><link data-react-helmet="true" href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/><link data-react-helmet="true" rel="favicon" href="/assets/personal-logo.svg"/></head><body style="font-family:sans-serif;color:#333;background-color:#003153;display:flex;gap:1rem;flex-direction:column;margin:0 auto;line-height:1.5;max-width:80ch;padding:1rem"><a href="/" style="align-self:flex-start;line-height:0"><img src="/assets/personal-logo.svg" alt="Abstract butterfly (my personal logo)" style="height:4rem;width:6rem"/></a><header><nav style="padding:1rem;display:flex;gap:1rem;background-color:#DDD"><a href="/index.html">Index</a><a href="/about/index.html">About</a></nav></header><main style="background-color:#DDD;padding:1rem"><h1>About this Site</h1><h2>Underlying Technologies</h2><p>Fun fact about me - I <em>love</em> ECMAScript and I also love the <a href="https://reactjs.org">React</a> library.</p><p>So, in building this site I had two primary design contraints:</p><ol><li>The site must be truly and fully static (i.e. HTML &amp; CSS only)</li><li>The site must be built with React</li></ol><p>Design contraint 1 aims for maximal <abbr title="User experience">UX</abbr> (speed, accessibility, ease-of-use, etc.), while design contraint 2 aims for the best <abbr title="Developer experience">DX</abbr>.</p><p>So many &quot;Set up a personal blog with React&quot; sites online only go so far as to ship the React and React DOM libraries to the client along with the blog assets. While this might be fine for business application or more complex web apps/web sites - this is not okay for a static blog.</p><p>Thus, by utilizing the <code>renderToStaticMarkup</code> method and a bit of boostrapping to import components and map their names to an HTML file name - we can &quot;render&quot; pages server side just once. From there, we can upload the HTML (and other assets) to GitHub pages for minimal cost hosting.</p><p>In an original incarnation of the project - I originally used Webpack with a custom set of plugins and loaders to transpile and render the code in the build pipeline, however it felt too complex and after being away from the code for a bit I didn&#x27;t really feel like it was the best solution. So, I went back to the drawing board and setup a simpler Webpack transpilation pipeline the would create a NodeJS render script.</p><p>However, while I felt better about the render script (vs. render pipeline) - integrating Node with newer and DX-friendly tools (e.g. JSX, TypeScript) is kind of a pain. I then decided to port what I had in Node to Deno since TypeScript (and thus JSX) support is built-in first class.</p><p>The fruits of that labor are what you see now! I hope you enjoy 😁</p><h3>Source Code</h3><a href="https://github.com/rgeorgebu/rgeorgebu.github.io">GitHub (main source)</a><h2>Notes on the Design</h2><ul><li>The background is a shade of <a href="https://youtu.be/BtnCynfmBnc">Prussian Blue</a></li><li>The max width is <a href="https://en.wikipedia.org/wiki/Characters_per_line">80 characters</a></li></ul></main><footer style="padding:1rem;display:flex;flex-direction:column;background-color:#DDD"><small>© 2022</small><small>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></small><small>This work&#x27;s source code is licensed under <a rel="license" href="https://github.com/rgeorgebu/rgeorgebu.github.io/blob/master/LICENSE.md">BSD-3-Clause</a></small></footer></body></html>
+<!DOCTYPE html><html lang="en"><head><meta data-react-helmet="true" charSet="utf-8"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-react-helmet="true">This Site | rgeorgebu</title><link data-react-helmet="true" href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/><link data-react-helmet="true" rel="favicon" href="/assets/personal-logo.svg"/><style data-react-helmet="true">
+					body {
+						font-family: sans-serif;
+						color: #333;
+						background-color: #003153;
+						display: flex;
+						gap: 1rem;
+						flex-direction: column;
+						margin: 0 auto;
+						line-height: 1.5;
+						max-width: 80ch;
+						padding: 1rem;
+					}
+
+					h1, h2, h3, h4, h5, h6 {
+						margin-block-start: 0;
+						margin-block-end: 0.25em;
+					}
+
+					h2:not(:first-child),
+					h3:not(:first-child),
+					h4:not(:first-child),
+					h5:not(:first-child),
+					h6:not(:first-child) {
+						margin-block-start: 1em;
+					}
+
+					p {
+						margin-block-start: 0;
+						margin-block-end: 0;
+					}
+
+					p + p {
+						margin-block-start: 1em;
+					}
+				</style><style data-react-helmet="true">
+					.logo {
+						align-self: flex-start;
+						line-height: 0;
+					}
+
+					.logo img {
+						height: 4rem;
+						width: 6rem;
+					}
+				</style><style data-react-helmet="true">
+					nav {
+						padding: 1rem;
+						display: flex;
+						gap: 1rem;
+						background-color: #ddd;
+					}
+				</style><style data-react-helmet="true">
+                    main {
+                        background-color: #ddd;
+                        padding: 1rem;
+                    }
+                </style><style data-react-helmet="true">
+				footer {
+					padding: 1rem;
+					display: flex;
+					flex-direction: column;
+					background-color: #ddd;
+				}
+			</style></head><body><a href="/" class="logo"><img src="/assets/personal-logo.svg" alt="Abstract butterfly (my personal logo)"/></a><header><nav><a href="/index.html">Index</a><a href="/about/index.html">About</a></nav></header><main><h1>About this Site</h1><h2>Underlying Technologies</h2><p>Fun fact about me - I <em>love</em> ECMAScript and I also love the <a href="https://reactjs.org">React</a> library.</p><p>So, in building this site I had two primary design contraints:</p><ol><li>The site must be truly and fully static (i.e. HTML and CSS only)</li><li>The site must be built with React</li></ol><p>Design contraint 1 aims for maximal <abbr title="User experience">UX</abbr> (speed, accessibility, ease-of-use, etc.), while design contraint 2 aims for the best <abbr title="Developer experience">DX</abbr>.</p><p>So many &quot;Set up a personal blog with React&quot; sites online only go so far as to ship the React and React DOM libraries to the client along with the blog assets. While this might be fine for business application or more complex web apps/web sites - this is not okay for a static blog.</p><p>Thus, by utilizing the <code>renderToStaticMarkup</code> method and a bit of boostrapping to import components and map their names to an HTML file name - we can &quot;render&quot; pages server side just once. From there, we can upload the HTML (and other assets) to GitHub pages for minimal cost hosting.</p><p>In an original incarnation of the project - I originally used Webpack with a custom set of plugins and loaders to transpile and render the code in the build pipeline, however it felt too complex and after being away from the code for a bit I didn&#x27;t really feel like it was the best solution. So, I went back to the drawing board and setup a simpler Webpack transpilation pipeline the would create a NodeJS render script.</p><p>However, while I felt better about the render script (vs. render pipeline) - integrating Node with newer and DX-friendly tools (e.g. JSX, TypeScript) is kind of a pain. I then decided to port what I had in Node to Deno since TypeScript (and thus JSX) support is built-in first class.</p><p>The fruits of that labor are what you see now! I hope you enjoy 😁</p><h3>Source Code</h3><a href="https://github.com/rgeorgebu/rgeorgebu.github.io">GitHub (main source)</a><h2>Notes on the Design</h2><ul><li>The background is a shade of <a href="https://youtu.be/BtnCynfmBnc">Prussian Blue</a></li><li>The max width is <a href="https://en.wikipedia.org/wiki/Characters_per_line">80 characters</a></li></ul></main><footer><small>© 2022</small><small>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></small><small>This work&#x27;s source code is licensed under <a rel="license" href="https://github.com/rgeorgebu/rgeorgebu.github.io/blob/master/LICENSE.md">BSD-3-Clause</a></small></footer></body></html>
