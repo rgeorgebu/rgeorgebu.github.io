@@ -11,7 +11,7 @@ export function Index() {
 			<p>How's it going there?</p>
 			<p>Welcome to my website (you can call me George)</p>
 			<p>
-				Stick around for a bit or pass on by - I hope you're day is going well!
+				Stick around for a bit or pass on by - I hope your day is going well!
 			</p>
 		</Layout>
 	);
