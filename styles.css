@@ -15,10 +15,15 @@ body {
     max-width: 80ch;
 }
 
-header, main, footer {
+header, main, footer, nav {
     border: 3px solid #003153;
     padding: 1rem;
     background-color: white;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
 }
 
 footer {
